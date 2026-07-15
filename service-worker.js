@@ -1,5 +1,5 @@
-const CACHE='tanisha-v14-ultimate-20260715';
-const CORE=['/','/index.html','/styles.css','/app.js','/config.js','/assets/brand-round.png','/assets/brand-transparent.png','/assets/product-placeholder.svg','/manifest.webmanifest'];
+const CACHE='tanisha-v15-final-github-20260715';
+const CORE=['/','/index.html','/styles.css','/app.js','/config.js','/brand-round.png','/brand-transparent.png','/product-placeholder.svg','/manifest.webmanifest'];
 self.addEventListener('install',event=>{self.skipWaiting();event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE)))});
 self.addEventListener('activate',event=>{event.waitUntil(Promise.all([self.clients.claim(),caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key))))]))});
 self.addEventListener('fetch',event=>{

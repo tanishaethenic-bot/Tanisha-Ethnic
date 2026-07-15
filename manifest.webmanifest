@@ -8,12 +8,12 @@
   "description": "Premium ethnic wear, festive collections and WhatsApp ordering from Ahmedabad.",
   "icons": [
     {
-      "src": "assets/favicon-192.png",
+      "src": "favicon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "assets/icon-512.png",
+      "src": "icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
@@ -32,7 +32,7 @@
       "url": "/#new",
       "icons": [
         {
-          "src": "assets/icon-192.png",
+          "src": "icon-192.png",
           "sizes": "192x192",
           "type": "image/png"
         }
@@ -44,7 +44,7 @@
       "url": "/#wishlist",
       "icons": [
         {
-          "src": "assets/icon-192.png",
+          "src": "icon-192.png",
           "sizes": "192x192",
           "type": "image/png"
         }

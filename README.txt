@@ -1,24 +1,32 @@
-TANISHA ETHNICS — V14 ULTIMATE 10/10 EDITION
+TANISHA ETHNICS — FINAL GITHUB V15
 
-DEPLOY
-1. Is ZIP ko Netlify Deploy manually me upload karein, ya GitHub repository me files replace/commit karein.
-2. IMPORTANT: Supabase SQL Editor me updated setup.sql ek baar Run karein. Existing data delete nahi hoga.
-3. Deploy ke baad browser/site data clear karke website reopen karein.
+IMPORTANT
+This package is intentionally FLAT: all files, logos and icons are in the same folder.
+This prevents the broken-logo problem that happened when the assets folder was not uploaded to GitHub.
 
-V14 FEATURES
-- Luxury auto festival slider, premium loader and animations
-- Equal-size product cards, multiple images, zoom and related products
-- Live search plus price, category, fabric, colour and sorting filters
-- Wishlist, recently viewed, recommendations and trending collection
-- Cart quantity, removal, total, TANISHA10 coupon and WhatsApp checkout
-- Product size chart, fabric, work, wash care, COD and delivery information
-- Reviews with average rating, optional photo upload and admin approval
-- Festival popup, Instagram gallery, WhatsApp newsletter and order tracking support
-- PWA, SEO, structured design and mobile bottom navigation
-- Admin dashboard statistics and product fabric/work/wash-care fields
+GITHUB DEPLOY
+1. Download and extract this ZIP.
+2. Open the connected GitHub repository and upload/replace EVERY extracted file.
+3. Do not upload the ZIP itself.
+4. Commit message: Tanisha Ethnics V15 final
+5. Netlify auto-publishing will deploy the commit automatically.
 
-ADMIN
-Open /admin.html
+SUPABASE
+- Existing products/settings remain connected through config.js.
+- Run setup.sql once only if the V14/V15 database additions were not run earlier.
 
-COUPON
-TANISHA10 = 10% cart discount
+MAIN FEATURES
+- Premium festival hero slider and offer popup
+- Mobile two-column product cards
+- Live search, sorting and price/category/fabric/colour filters
+- Product gallery, zoom, details, size/fabric/work/wash care
+- Wishlist, recently viewed, related and recommended products
+- Cart quantities, total, coupon and WhatsApp checkout
+- Reviews with optional photo and admin approval
+- Order-support section, Instagram/WhatsApp updates
+- Admin products, stock, offers, settings, reviews and statistics
+- PWA, SEO, security headers and responsive mobile layout
+
+LOGO FIX
+Header, loader, story and footer now reference root-level brand files:
+brand-transparent.png and brand-round.png
