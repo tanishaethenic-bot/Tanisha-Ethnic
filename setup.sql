@@ -96,3 +96,15 @@ drop policy if exists "Authenticated update product images" on storage.objects;
 create policy "Authenticated update product images" on storage.objects for update to authenticated using (bucket_id='product-images') with check (bucket_id='product-images');
 drop policy if exists "Authenticated delete product images" on storage.objects;
 create policy "Authenticated delete product images" on storage.objects for delete to authenticated using (bucket_id='product-images');
+
+
+-- V14 ULTIMATE ADDITIONS
+alter table public.products add column if not exists fabric text;
+alter table public.products add column if not exists work text;
+alter table public.products add column if not exists wash_care text;
+alter table public.reviews add column if not exists photo_url text;
+insert into storage.buckets (id,name,public,file_size_limit,allowed_mime_types) values ('review-images','review-images',true,4194304,array['image/jpeg','image/png','image/webp']) on conflict (id) do update set public=true,file_size_limit=4194304;
+drop policy if exists "Public view review images" on storage.objects;
+create policy "Public view review images" on storage.objects for select to public using (bucket_id='review-images');
+drop policy if exists "Public upload review images" on storage.objects;
+create policy "Public upload review images" on storage.objects for insert to anon, authenticated with check (bucket_id='review-images');
