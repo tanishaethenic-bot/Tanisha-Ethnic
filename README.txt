@@ -1,3 +1,15 @@
+TANISHA ETHNICS V17 — DESKTOP STYLE + APP FIXED
+
+CHANGES
+- Phone par desktop-style two-column premium layout
+- Hero section desktop composition ke closer
+- Header logo and icons properly fitted
+- Product and video grids remain two-column on mobile
+- Brand story and footer compact desktop-like layout
+- PWA manifest, maskable icons, orientation and standalone mode fixed
+- Service worker navigation cache fixed to avoid old version sticking
+- Bottom app navigation and safe-area spacing corrected
+
 TANISHA ETHNICS — FINAL GITHUB V15
 
 IMPORTANT

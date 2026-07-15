@@ -240,3 +240,88 @@ img{max-width:100%}.productCard,.headerIcon,.cartBtn,.primaryBtn,.secondaryBtn,.
   .bottomNav i{right:15%!important;top:-1px!important}
 }
 @media(max-width:390px){.brand img{width:145px!important}.videoGrid{grid-template-columns:1fr 1fr}}
+
+/* V17 — Desktop-style mobile layout + installed app polish */
+:root{--page-max:1440px}
+main>section:not(.heroSlider):not(.trustRow):not(.brandStorySection), footer{max-width:var(--page-max);margin-left:auto;margin-right:auto}
+@media(min-width:901px){
+  .siteHeader{padding-left:max(4%,calc((100% - var(--page-max))/2));padding-right:max(4%,calc((100% - var(--page-max))/2))}
+  .contactStrip,.heroSlider,.trustRow,.policyBar{max-width:var(--page-max);margin-inline:auto}
+}
+@media(max-width:700px){
+  html{font-size:14px}
+  .siteHeader{display:grid!important;grid-template-columns:44px minmax(0,1fr) auto!important;align-items:center!important;min-height:70px!important;padding:7px 10px!important;gap:8px!important}
+  .menuBtn.iconOnly{width:42px!important;height:42px!important;flex-basis:42px!important}
+  .brand{display:flex!important;min-width:0!important;overflow:visible!important}
+  .brand img{width:min(185px,100%)!important;height:54px!important;object-fit:contain!important;object-position:left center!important}
+  .headerActions{display:flex!important;align-items:center!important;gap:6px!important}
+  .headerActions #searchBtn,.headerActions #cartBtn{display:grid!important}
+  .headerActions>a.headerIcon,.headerActions #installBtn,.headerActions #whatsappTop{display:none!important}
+  .headerIcon,.cartBtn{width:42px!important;height:42px!important;padding:0!important;border-radius:12px!important}
+  .cartBtn span{position:absolute;top:-5px;right:-4px}
+  .offerBar{font-size:12px;padding:8px 12px}
+  .contactStrip{grid-template-columns:repeat(2,1fr)!important}
+  .contactStrip>a{min-height:62px;padding:9px 12px!important}
+
+  /* Keep desktop visual hierarchy on phones */
+  .heroSlider{min-height:540px!important}
+  .slide{display:grid!important;grid-template-columns:1.05fr .95fr!important;align-items:center!important;padding:42px 28px 78px!important}
+  .slideText{max-width:none!important;z-index:3!important}
+  .slide h1{font-size:clamp(38px,10vw,58px)!important;line-height:.98!important;max-width:380px!important}
+  .slide p{font-size:15px!important;line-height:1.45!important;max-width:300px!important}
+  .heroActions{flex-direction:column!important;align-items:flex-start!important;gap:12px!important;margin-top:20px!important}
+  .slideVisual{position:relative!important;right:auto!important;bottom:auto!important;opacity:1!important;align-self:end!important}
+  .slideVisual img{max-width:100%!important;max-height:300px!important;object-fit:contain!important;filter:drop-shadow(0 20px 35px #0008)!important}
+  .heroGlow{width:230px!important;height:230px!important}
+  .sliderBtn{width:40px!important;height:40px!important}
+
+  .trustRow{grid-template-columns:repeat(2,1fr)!important;padding:18px 12px!important;gap:0!important}
+  .trustRow div{padding:12px 6px!important;border-right:0!important;border-bottom:1px solid var(--line)}
+  .trustRow div:nth-last-child(-n+2){border-bottom:0}
+  .section{padding:46px 14px!important}
+  .sectionHeading h2,.shopHead h2{font-size:34px!important}
+  .productGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
+  .productCard{border-radius:16px!important}
+  .cardBody{padding:12px!important}
+  .cardBody h3{font-size:18px!important;min-height:44px!important}
+  .cardActions{grid-template-columns:1fr!important}
+  .cardActions>*{font-size:12px!important;padding:10px 7px!important}
+  .addCartBtn{min-height:42px!important}
+  .shopHead{gap:14px!important}
+  .filters{display:grid!important;grid-template-columns:1fr 1fr!important;width:100%!important}
+  .filters input{grid-column:1/-1!important;width:100%!important}
+  .filters select{width:100%!important;min-width:0!important}
+  .videoGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .brandStorySection{grid-template-columns:.75fr 1.25fr!important;text-align:left!important;gap:20px!important;padding:48px 16px!important}
+  .storyVisual img{width:100%!important;max-width:175px!important}
+  .storyCopy h2{font-size:34px!important}
+  .storyCopy p{font-size:13px!important;line-height:1.6!important}
+  .storyStats{grid-template-columns:repeat(3,1fr)!important;gap:7px!important}
+  .storyStats span{padding:10px 7px!important}
+  .storyStats b{font-size:15px!important}
+  .storyStats small{font-size:9px!important}
+  footer{grid-template-columns:1.2fr .8fr 1fr!important;padding:38px 16px calc(120px + env(safe-area-inset-bottom))!important;gap:18px!important}
+  .footerBrand{align-items:flex-start!important}.footerBrand img{width:72px!important;height:72px!important}.footerStory{font-size:12px!important}
+  .footerLinks,.footerContacts{font-size:12px!important}
+
+  /* Installed app: stable navigation and safe areas */
+  body{padding-bottom:calc(94px + env(safe-area-inset-bottom))!important}
+  .bottomNav{left:10px!important;right:10px!important;bottom:calc(8px + env(safe-area-inset-bottom))!important;min-height:70px!important;padding:8px 6px!important}
+  .bottomNav a,.bottomNav button{font-size:11px!important;min-height:52px!important;justify-content:center!important}
+  .bottomNav span{font-size:23px!important}
+  .floatingWa{bottom:calc(98px + env(safe-area-inset-bottom))!important;right:14px!important}
+}
+@media(max-width:430px){
+  .brand img{width:min(156px,100%)!important}
+  .slide{grid-template-columns:1.12fr .88fr!important;padding-inline:20px!important}
+  .slide h1{font-size:39px!important}
+  .slideVisual img{max-height:245px!important}
+  .brandStorySection{grid-template-columns:1fr!important;text-align:center!important}
+  .storyVisual img{max-width:180px!important}
+  footer{grid-template-columns:1fr 1fr!important}.footerBrand{grid-column:1/-1}
+}
+@media(display-mode:standalone){
+  .offerBar{padding-top:calc(8px + env(safe-area-inset-top))}
+  .siteHeader{top:0}
+  body{-webkit-tap-highlight-color:transparent;overscroll-behavior-y:none}
+}
