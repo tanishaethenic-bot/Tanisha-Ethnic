@@ -360,3 +360,37 @@ main>section:not(.heroSlider):not(.trustRow):not(.brandStorySection), footer{max
   .brandStorySection{grid-template-columns:1fr!important;text-align:center!important}
   footer{grid-template-columns:1fr 1fr!important}.footerBrand{grid-column:1/-1}
 }
+
+/* V20 FINAL STABLE — desktop-inspired mobile without clipping */
+@media(max-width:700px){
+  html,body{width:100%!important;max-width:100%!important;overflow-x:hidden!important}
+  .offerBar,.siteHeader,.contactStrip,.heroSlider,.trustRow,main,footer,.policyBar{width:100%!important;max-width:100%!important;margin-left:0!important;margin-right:0!important}
+  .siteHeader{display:grid!important;grid-template-columns:48px minmax(0,1fr) 98px!important;align-items:center!important;gap:8px!important;padding:9px 12px!important;min-height:76px!important;overflow:hidden!important}
+  .menuBtn.iconOnly{width:46px!important;height:46px!important}
+  .brand{width:100%!important;min-width:0!important;overflow:hidden!important;justify-content:flex-start!important}
+  .brand img{display:block!important;width:100%!important;max-width:188px!important;height:56px!important;object-fit:contain!important;object-position:left center!important}
+  .headerActions{width:98px!important;display:grid!important;grid-template-columns:46px 46px!important;gap:6px!important}
+  .headerActions #searchBtn,.headerActions #cartBtn{display:grid!important;width:46px!important;height:46px!important;padding:0!important}
+  .headerActions>a.headerIcon,.headerActions #installBtn,.headerActions #whatsappTop{display:none!important}
+  .cartBtn{position:relative!important}.cartBtn span{position:absolute!important;top:-6px!important;right:-5px!important}
+  .contactStrip{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;overflow:visible!important}
+  .contactStrip>a{min-width:0!important;justify-content:flex-start!important;padding:10px 12px!important}
+  .heroSlider{min-height:610px!important;border-radius:0!important}
+  .slide{grid-template-columns:1.08fr .92fr!important;padding:52px 18px 88px!important;gap:10px!important}
+  .slide h1{font-size:clamp(39px,10.4vw,55px)!important;line-height:1!important;max-width:100%!important}
+  .slide p{font-size:15px!important;max-width:270px!important}
+  .slideVisual img{width:100%!important;max-height:320px!important}
+  .heroActions{gap:10px!important}.heroActions .primaryBtn{padding:12px 15px!important}
+  .section{padding:50px 14px!important}
+  .productGrid,.videoGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:11px!important}
+  .brandStorySection{width:100%!important;grid-template-columns:1fr!important;text-align:center!important;padding:50px 16px!important}
+  footer{width:100%!important;grid-template-columns:1fr 1fr!important;padding:42px 16px calc(122px + env(safe-area-inset-bottom))!important;gap:18px!important}
+  .footerBrand{grid-column:1/-1!important}
+}
+@media(max-width:390px){
+  .siteHeader{grid-template-columns:44px minmax(0,1fr) 86px!important;padding-inline:8px!important}
+  .menuBtn.iconOnly,.headerActions #searchBtn,.headerActions #cartBtn{width:40px!important;height:40px!important}
+  .headerActions{width:86px!important;grid-template-columns:40px 40px!important}
+  .brand img{max-width:155px!important;height:50px!important}
+  .slide{padding-inline:14px!important}.slide h1{font-size:37px!important}.slideVisual img{max-height:260px!important}
+}

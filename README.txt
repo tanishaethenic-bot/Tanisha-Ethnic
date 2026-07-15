@@ -1,27 +1,20 @@
-TANISHA ETHNICS V19 — FINAL ONE-UPLOAD EDITION
+TANISHA ETHNICS V20 — FINAL STABLE GITHUB BUILD
 
-CONNECTED SUPABASE
-- Project URL configured
-- Publishable key configured
-- Admin login, products, reviews and videos use Supabase
+ONE-TIME GITHUB UPDATE
+1. Is ZIP ko phone me Extract karein.
+2. Extracted folder ke ANDAR ki saari files GitHub repository ke root me upload/replace karein.
+3. Commit directly to main branch.
+4. Commit message: Tanisha Ethnics V20 final stable
+5. Netlify auto deploy karega.
 
-FINAL UI
-- Normal mobile browser also keeps desktop-style visual hierarchy
-- Installed PWA/app uses the same premium responsive layout
-- 2-column mobile product and video grids
-- Desktop-style hero, brand story and footer on mobile
-- Mobile header, cart badge, WhatsApp and bottom navigation polished
+IMPORTANT
+- Supabase V20 config already connected.
+- setup.sql already run ho chuka hai to dobara run karna zaroori nahi.
+- Admin: /admin.html
+- Admin Videos tab me Add Video form hamesha visible rahega.
+- New service worker network-first hai, isliye old version cache me atakna kam hoga.
+- Deploy ke baad installed old app ko uninstall karke website se dobara install karein.
 
-DEPLOY ONCE
-1. Extract this ZIP.
-2. Upload all files and the videos folder to the GitHub repository root.
-3. Commit directly to main.
-4. Netlify deploys automatically.
-5. After deployment, clear old site data or uninstall/reinstall the PWA once.
-
-ADMIN
-https://tanishaethnics.netlify.app/admin.html
-Admin email: tanishaethnic@gmail.com
-Use the password created in Supabase Authentication.
-
-Do not run setup.sql again unless database setup was incomplete.
+ADMIN LOGIN
+Email: tanishaethnic@gmail.com
+Password wahi jo Supabase user create karte waqt set kiya tha.

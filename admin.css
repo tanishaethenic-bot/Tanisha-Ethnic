@@ -5,3 +5,14 @@
 
 /* V18 video manager */
 .videoAdminRow{display:grid;grid-template-columns:110px 1fr auto;gap:16px;align-items:center;padding:14px 0;border-top:1px solid #eee}.videoAdminRow video{width:100px;height:135px;object-fit:cover;border-radius:10px;background:#160c08}.videoAdminRow p{margin:5px 0;color:#765f53}.videoAdminRow .actions{justify-content:flex-end}@media(max-width:700px){.videoAdminRow{grid-template-columns:82px 1fr}.videoAdminRow video{width:76px;height:105px}.videoAdminRow .actions{grid-column:1/-1}.panelForm{padding:14px}.formGrid{grid-template-columns:1fr}}
+
+/* V20 admin stability and mobile video panel */
+#videosTab:not(.hidden){display:block!important;min-height:620px!important}
+#videosTab .title,#videosTab #videoRows,#videosTab #videoForm{visibility:visible!important;opacity:1!important}
+@media(max-width:720px){
+  nav{position:sticky;top:0;z-index:10;background:var(--cream);padding:12px 4%!important}
+  section{margin:0 3% 22px!important;padding:18px!important}
+  #videosTab .title{display:flex!important;flex-direction:column!important;align-items:stretch!important}
+  #videosTab .title button{width:100%!important}
+  #videoForm{display:grid!important;margin-top:16px!important}
+}
