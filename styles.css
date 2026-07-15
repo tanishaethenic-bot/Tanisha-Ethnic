@@ -325,3 +325,38 @@ main>section:not(.heroSlider):not(.trustRow):not(.brandStorySection), footer{max
   .siteHeader{top:0}
   body{-webkit-tap-highlight-color:transparent;overscroll-behavior-y:none}
 }
+
+/* V19 FINAL — desktop-style experience on normal mobile browser and installed app */
+@media(max-width:700px){
+  html,body{width:100%;overflow-x:hidden}
+  .siteHeader{grid-template-columns:48px minmax(0,1fr) auto!important;min-height:78px!important;padding:10px 14px!important}
+  .menuBtn.iconOnly{width:46px!important;height:46px!important}
+  .brand img{width:min(220px,100%)!important;height:58px!important}
+  .headerIcon,.cartBtn{width:46px!important;height:46px!important}
+  .contactStrip{grid-template-columns:repeat(4,minmax(0,1fr))!important;overflow-x:auto!important;scrollbar-width:none}
+  .contactStrip::-webkit-scrollbar{display:none}
+  .contactStrip>a{min-width:150px!important}
+  .heroSlider{min-height:620px!important}
+  .slide{grid-template-columns:1fr 1fr!important;padding:54px 24px 90px!important;gap:14px!important}
+  .slide h1{font-size:clamp(42px,11vw,62px)!important;max-width:420px!important}
+  .slide p{font-size:16px!important;max-width:330px!important}
+  .slideVisual img{max-height:360px!important}
+  .section{padding:54px 18px!important}
+  .sectionHeading h2,.shopHead h2{font-size:38px!important}
+  .productGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px!important}
+  .imageWrap>img{aspect-ratio:3/4!important;object-fit:cover!important;object-position:top center!important}
+  .cardBody{padding:14px!important}
+  .cardBody h3{font-size:19px!important;min-height:48px!important}
+  .videoGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px!important}
+  .brandStorySection{grid-template-columns:.8fr 1.2fr!important;text-align:left!important;gap:24px!important;padding:58px 20px!important}
+  .storyVisual img{max-width:210px!important}
+  footer{grid-template-columns:1.25fr .75fr 1fr!important;gap:22px!important;padding:46px 20px calc(120px + env(safe-area-inset-bottom))!important}
+}
+@media(max-width:420px){
+  .brand img{width:min(175px,100%)!important}
+  .slide{grid-template-columns:1.12fr .88fr!important;padding-inline:18px!important}
+  .slide h1{font-size:41px!important}
+  .slideVisual img{max-height:270px!important}
+  .brandStorySection{grid-template-columns:1fr!important;text-align:center!important}
+  footer{grid-template-columns:1fr 1fr!important}.footerBrand{grid-column:1/-1}
+}

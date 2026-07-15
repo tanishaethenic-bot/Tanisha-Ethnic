@@ -1,53 +1,27 @@
-TANISHA ETHNICS V17 — DESKTOP STYLE + APP FIXED
+TANISHA ETHNICS V19 — FINAL ONE-UPLOAD EDITION
 
-CHANGES
-- Phone par desktop-style two-column premium layout
-- Hero section desktop composition ke closer
-- Header logo and icons properly fitted
-- Product and video grids remain two-column on mobile
-- Brand story and footer compact desktop-like layout
-- PWA manifest, maskable icons, orientation and standalone mode fixed
-- Service worker navigation cache fixed to avoid old version sticking
-- Bottom app navigation and safe-area spacing corrected
+CONNECTED SUPABASE
+- Project URL configured
+- Publishable key configured
+- Admin login, products, reviews and videos use Supabase
 
-TANISHA ETHNICS — FINAL GITHUB V15
+FINAL UI
+- Normal mobile browser also keeps desktop-style visual hierarchy
+- Installed PWA/app uses the same premium responsive layout
+- 2-column mobile product and video grids
+- Desktop-style hero, brand story and footer on mobile
+- Mobile header, cart badge, WhatsApp and bottom navigation polished
 
-IMPORTANT
-This package is intentionally FLAT: all files, logos and icons are in the same folder.
-This prevents the broken-logo problem that happened when the assets folder was not uploaded to GitHub.
+DEPLOY ONCE
+1. Extract this ZIP.
+2. Upload all files and the videos folder to the GitHub repository root.
+3. Commit directly to main.
+4. Netlify deploys automatically.
+5. After deployment, clear old site data or uninstall/reinstall the PWA once.
 
-GITHUB DEPLOY
-1. Download and extract this ZIP.
-2. Open the connected GitHub repository and upload/replace EVERY extracted file.
-3. Do not upload the ZIP itself.
-4. Commit message: Tanisha Ethnics V15 final
-5. Netlify auto-publishing will deploy the commit automatically.
+ADMIN
+https://tanishaethnics.netlify.app/admin.html
+Admin email: tanishaethnic@gmail.com
+Use the password created in Supabase Authentication.
 
-SUPABASE
-- Existing products/settings remain connected through config.js.
-- Run setup.sql once only if the V14/V15 database additions were not run earlier.
-
-MAIN FEATURES
-- Premium festival hero slider and offer popup
-- Mobile two-column product cards
-- Live search, sorting and price/category/fabric/colour filters
-- Product gallery, zoom, details, size/fabric/work/wash care
-- Wishlist, recently viewed, related and recommended products
-- Cart quantities, total, coupon and WhatsApp checkout
-- Reviews with optional photo and admin approval
-- Order-support section, Instagram/WhatsApp updates
-- Admin products, stock, offers, settings, reviews and statistics
-- PWA, SEO, security headers and responsive mobile layout
-
-LOGO FIX
-Header, loader, story and footer now reference root-level brand files:
-brand-transparent.png and brand-round.png
-
-
-V16 FINAL + INSTAGRAM VIDEO FOLDER
-- Header duplicate/cut brand text fixed.
-- Mobile WhatsApp and bottom navigation spacing polished.
-- Brand-story logo ratio fixed.
-- New Instagram Videos section added.
-- Upload MP4 files inside /videos and update /videos/videos.json.
-- Example and full instructions are in /videos/HOW_TO_ADD_VIDEOS.txt.
+Do not run setup.sql again unless database setup was incomplete.
