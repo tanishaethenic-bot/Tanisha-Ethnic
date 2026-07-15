@@ -30,3 +30,12 @@ MAIN FEATURES
 LOGO FIX
 Header, loader, story and footer now reference root-level brand files:
 brand-transparent.png and brand-round.png
+
+
+V16 FINAL + INSTAGRAM VIDEO FOLDER
+- Header duplicate/cut brand text fixed.
+- Mobile WhatsApp and bottom navigation spacing polished.
+- Brand-story logo ratio fixed.
+- New Instagram Videos section added.
+- Upload MP4 files inside /videos and update /videos/videos.json.
+- Example and full instructions are in /videos/HOW_TO_ADD_VIDEOS.txt.

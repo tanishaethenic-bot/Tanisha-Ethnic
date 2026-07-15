@@ -205,3 +205,38 @@ img{max-width:100%}.productCard,.headerIcon,.cartBtn,.primaryBtn,.secondaryBtn,.
   .storyVisual img{width:min(270px,82%)}
   .footerBrand img{width:90px;height:90px}
 }
+
+
+/* V16 FINAL MOBILE POLISH + LOCAL INSTAGRAM VIDEO GALLERY */
+.brand span{display:none!important}
+.brand{min-width:0;overflow:hidden}
+.brand img{width:210px!important;height:60px!important;max-width:100%;object-fit:contain!important;object-position:left center!important}
+.storyVisual img{width:min(390px,88%)!important;height:auto!important;aspect-ratio:1/1!important;object-fit:contain!important;border-radius:50%!important}
+.videoSection{background:linear-gradient(180deg,#fffaf5,#f4e5d8)}
+.sectionIntro{margin:8px 0 0;color:#7b6255}
+.videoGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.videoCard{overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 14px 40px rgba(43,27,21,.09)}
+.videoFrame{aspect-ratio:9/16;background:#120806;overflow:hidden}
+.videoFrame video{display:block;width:100%;height:100%;object-fit:cover;background:#120806}
+.videoMeta{padding:16px}
+.videoMeta small{color:#b0834e;letter-spacing:1.5px;font-weight:800}
+.videoMeta h3{font-family:'Playfair Display',serif;font-size:23px;margin:7px 0}
+.videoMeta p{margin:0;color:#755e52;line-height:1.55}
+.videoEmpty{grid-column:1/-1;text-align:center;padding:54px 20px;border:1px dashed #cba98a;border-radius:20px;background:#fff}
+.videoEmpty b{font-family:'Playfair Display',serif;font-size:28px}
+.videoEmpty p{color:#765f54}.videoEmpty code{background:#f3e5d9;padding:2px 6px;border-radius:5px}
+@media(max-width:900px){.videoGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){
+  .siteHeader{grid-template-columns:43px minmax(0,1fr) auto!important;gap:7px!important;padding:7px 10px!important;overflow:hidden}
+  .brand img{width:168px!important;height:52px!important}
+  .headerActions>a.headerIcon,.headerActions .primaryBtn{display:none!important}
+  .headerActions{gap:5px!important}
+  .headerIcon,.cartBtn{width:39px!important;height:39px!important;flex:0 0 39px!important}
+  .offerBar{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .videoGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .videoCard{border-radius:14px}
+  .videoMeta{padding:10px}.videoMeta h3{font-size:17px}.videoMeta p{font-size:12px}
+  .floatingWa{bottom:calc(105px + env(safe-area-inset-bottom))!important;right:14px!important}
+  .bottomNav i{right:15%!important;top:-1px!important}
+}
+@media(max-width:390px){.brand img{width:145px!important}.videoGrid{grid-template-columns:1fr 1fr}}
