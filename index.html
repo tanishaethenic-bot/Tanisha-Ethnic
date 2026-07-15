@@ -19,8 +19,8 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" type="image/png" href="favicon-192.png"><link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="preconnect" href="https://aecescczeizgssmderdw.supabase.co" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=20">
+  <link rel="preconnect" href="https://cxydymcjgxgcdqgltnii.supabase.co" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=21">
   <!-- Tanisha Ethnics Premium V11 Final Boutique Edition -->
 </head>
 <body>
@@ -110,5 +110,19 @@
   <div id="festivalPopup" class="festivalPopup" aria-hidden="true"><button id="closeFestival">×</button><img src="brand-round.png" alt="Tanisha Ethnics"><small>LIMITED-TIME FESTIVE OFFER</small><h2 id="festivalTitle">Special Collection</h2><p id="festivalText">Discover premium festive styles.</p><a id="festivalShop" class="goldBtn" href="#shop">Shop Now</a></div><div id="toast" class="toast"></div>
 
   <section id="policy" class="policyBar"><b>Shopping information</b><span>COD and exchange availability is confirmed on WhatsApp before dispatch.</span><a href="mailto:tanishaethnic@gmail.com">Need help?</a></section>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js?v=20"></script><script src="app.js?v=20"></script>
+  <script>
+  // V21 safety fallback: menu remains usable even if a network/API script fails.
+  (()=>{
+    const byId=id=>document.getElementById(id);
+    const open=()=>{const n=byId('mainNav'),b=byId('menuBackdrop');if(!n||!b)return;n.classList.add('open');b.classList.add('open');n.setAttribute('aria-hidden','false');document.body.classList.add('noScroll')};
+    const close=()=>{const n=byId('mainNav'),b=byId('menuBackdrop');if(!n||!b)return;n.classList.remove('open');b.classList.remove('open');n.setAttribute('aria-hidden','true');document.body.classList.remove('noScroll')};
+    document.addEventListener('DOMContentLoaded',()=>{
+      byId('menuBtn')?.addEventListener('click',open);
+      byId('closeMenu')?.addEventListener('click',close);
+      byId('menuBackdrop')?.addEventListener('click',close);
+      document.querySelectorAll('#mainNav a').forEach(a=>a.addEventListener('click',close));
+    });
+  })();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js?v=21"></script><script src="app.js?v=21"></script>
 </body></html>
