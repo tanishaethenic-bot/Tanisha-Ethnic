@@ -138,3 +138,10 @@ drop policy if exists "Authenticated update store videos" on storage.objects;
 create policy "Authenticated update store videos" on storage.objects for update to authenticated using (bucket_id='store-videos') with check (bucket_id='store-videos');
 drop policy if exists "Authenticated delete store videos" on storage.objects;
 create policy "Authenticated delete store videos" on storage.objects for delete to authenticated using (bucket_id='store-videos');
+
+
+-- V26: refresh Supabase REST schema cache after tables/policies are created
+notify pgrst, 'reload schema';
+
+-- V26 quick verification (optional):
+-- select to_regclass('public.products'), to_regclass('public.videos');

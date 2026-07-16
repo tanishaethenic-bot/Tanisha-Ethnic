@@ -1,24 +1,16 @@
-TANISHA ETHNICS V25 — SUPABASE SYNC FINAL BUILD
+TANISHA ETHNICS V26 — ULTIMATE FINAL BUILD
 
-WHAT IS FIXED
-- Website and Admin now connect to the correct Supabase project: cxydymcjgxgcdqgltnii.
-- Correct publishable key added in config.js.
-- Videos tab blank-panel fix from V23 retained.
-- Video upload, edit, show/hide and delete code retained.
-- New V25 cache-busting and service-worker cache version added.
+FIXED
+- Correct Supabase project and publishable key retained.
+- Storefront missing videos database query fixed.
+- Admin Videos add/edit/delete/show-hide retained.
+- Admin login improved: account creation, forgot password and email magic-link login.
+- New black-gold Tanisha Ethnic logo installed across website/PWA.
+- V26 cache busting and network-first JS/CSS loading to prevent stale admin code.
+- setup.sql reloads Supabase REST schema cache.
 
-IMPORTANT FIRST-TIME DATABASE SETUP
-This correct Supabase project currently has no tables. Supabase SQL Editor me is ZIP ka complete setup.sql ek baar Run karein. Isse products, offers, site_settings, reviews, videos and storage buckets create honge.
+DEPLOY
+Extract ZIP, upload all files to GitHub repository root, and commit to main. Netlify auto-deploys.
 
-ADMIN USER
-Supabase Authentication > Users me tanishaethnic@gmail.com admin user isi correct project me create/invite karein. Password wahi hoga jisse Admin Panel me login karenge.
-
-GITHUB DEPLOY
-1. ZIP extract karein.
-2. Extracted folder ke andar ki saari files GitHub repository root me upload/replace karein.
-3. Commit directly to main.
-4. Commit message: Tanisha Ethnics V25 Supabase sync final
-5. Netlify automatically deploy karega.
-
-AFTER DEPLOY
-Old installed PWA uninstall karein ya site data clear karein, phir website/admin dobara kholen.
+DATABASE
+Run setup.sql once in the Supabase project shown in config.js. It is safe to re-run.

@@ -1,16 +1,16 @@
-TANISHA ETHNICS V25 — ONE-CLICK ADMIN SETUP
+TANISHA ETHNICS V26 ULTIMATE FINAL
 
-1) Supabase SQL Editor me setup.sql poora Run karein.
-2) GitHub me is folder ki saari files replace/upload karein.
-3) Commit: Tanisha Ethnics V25 one click admin
-4) Netlify deploy complete hone dein.
-5) /admin.html kholo.
-6) Apna email + minimum 6-character password likho.
-7) CREATE ADMIN ACCOUNT dabao.
-8) Email confirmation aaye to inbox/spam se confirm karo.
-9) Phir Login dabao.
+FIRST-TIME SETUP
+1. Supabase project cxydymcjgxgcdqgltnii open karein.
+2. SQL Editor me setup.sql poora Run karein.
+3. GitHub repository root me is folder ki SAARI files replace/upload karein.
+4. Commit: Tanisha Ethnics V26 ultimate final
+5. Netlify deploy complete hone dein.
+6. /admin.html?fresh=v26 kholo.
+7. First time: email + 6+ character password likhkar Create Admin Account dabayein.
+8. Confirmation email aaye to link open karein. Email issue ho to Email Login Link use karein.
 
-Correct Supabase project:
-https://cxydymcjgxgcdqgltnii.supabase.co
-
-NOTE: Password source code me store nahi hota. Supabase Authentication safely manage karta hai.
+IMPORTANT
+- Secret/service_role key kabhi website files me mat daalein.
+- config.js me sirf publishable key hai.
+- Old installed PWA uninstall ya site data clear karna recommended hai.

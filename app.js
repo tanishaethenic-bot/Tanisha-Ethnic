@@ -26,14 +26,15 @@ async function loadStore(){el('statusText').textContent='Loading products…';co
   supabaseClient.from('site_settings').select('*').order('id').limit(1).maybeSingle(),
   supabaseClient.from('offers').select('*').eq('active',true).order('created_at',{ascending:false}),
   supabaseClient.from('products').select('*').eq('active',true).order('featured',{ascending:false}).order('created_at',{ascending:false}),
-  supabaseClient.from('reviews').select('*').eq('approved',true).order('created_at',{ascending:false}).limit(12)
+  supabaseClient.from('reviews').select('*').eq('approved',true).order('created_at',{ascending:false}).limit(12),
+  supabaseClient.from('videos').select('*').eq('active',true).order('created_at',{ascending:false})
 ]);
 if(s.data)storeSettings={...storeSettings,...s.data};offers=o.data||[];products=p.data||[];reviews=r.data||[];videos=v.data||[];applySettings();renderHero();renderAll();renderWishlist();renderReviews();renderVideos(v.error);el('statusText').textContent=p.error?`Products load nahi hue: ${p.error.message}`:products.length?'':'Abhi koi product add nahi kiya gaya hai.';openSharedProduct()}
 
 function renderVideos(error){
   const grid=el('videoGrid'); if(!grid)return;
   const cta=el('videoInstagramCta'); if(cta)cta.href=storeSettings.instagram_url||'https://www.instagram.com/tanisha.ethnic/';
-  if(error){grid.innerHTML=`<div class="videoEmpty"><b>Videos setup required</b><p>Admin me video upload enable karne ke liye V22 setup.sql ek baar run karein.</p></div>`;return}
+  if(error){grid.innerHTML=`<div class="videoEmpty"><b>Videos setup required</b><p>Admin me video upload enable karne ke liye V26 setup.sql isi Supabase project me ek baar run karein.</p></div>`;return}
   grid.innerHTML=videos.map(v=>`<article class="videoCard"><div class="videoFrame"><video controls playsinline preload="metadata" poster="${esc(v.poster_url||'brand-round.png')}"><source src="${esc(v.video_url)}"></video></div><div class="videoMeta"><small>${esc(v.category||'TANISHA ETHNICS')}</small><h3>${esc(v.title||'Latest Video')}</h3>${v.caption?`<p>${esc(v.caption)}</p>`:''}</div></article>`).join('')||`<div class="videoEmpty"><b>New videos coming soon</b><p>Admin Panel → Videos se MP4 upload karein.</p></div>`;
 }
 
