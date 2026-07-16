@@ -1,25 +1,28 @@
-TANISHA ETHNICS V22 — CLEAN FINAL VIDEO MANAGER BUILD
+TANISHA ETHNICS V23 — FINAL VIDEO TAB FIX BUILD
 
-FIXED
-- Admin Videos tab now fully working: upload MP4/WebM, edit, hide/show and delete.
-- Website loads active videos from Supabase.
-- Missing videos table/storage SQL added.
-- Admin tab switching includes Videos.
-- Supabase preconnect corrected.
-- PWA cache bumped to V22.
-- Premium responsive media rendering retained.
-
-IMPORTANT ONE-TIME STEP
-Supabase SQL Editor me setup.sql poora ek baar Run karein. It is safe to re-run. This creates videos table and store-videos bucket.
+MAIN FIX
+- Admin Videos tab blank screen fixed.
+- admin.js, admin.html and admin.css all have new V23 content and cache-busting URLs.
+- Opening Videos always restores the panel and loads Supabase video records.
+- Add Video form remains visible even when there are zero videos.
+- Upload MP4/WebM, edit, show/hide and delete retained.
+- Website video section, products, offers, reviews, cart, wishlist and PWA retained.
 
 DEPLOY
-Extract ZIP, upload all files inside to GitHub repository root, commit to main. Netlify auto deploys.
-After deploy, uninstall old installed app and reinstall to clear old PWA cache.
+1. ZIP extract karein.
+2. Extracted folder ke ANDAR ki all files GitHub repository root me upload/replace karein.
+3. Make sure admin.js, app.js, service-worker.js bhi selected hon.
+4. Commit message: Tanisha Ethnics V23 final video fix
+5. Netlify deploy complete hone ke baad admin.html?tab=videos open karein.
+
+CACHE
+Chrome me site data clear karein ya old installed PWA uninstall karke reinstall karein.
+V23 files use unique ?v=23-final-1 URLs, isliye old V15/V22 JavaScript reuse nahi hona chahiye.
+
+SUPABASE
+V22 setup.sql success se run ho chuka hai to dobara zaroori nahi. Missing-table error aaye tabhi setup.sql run karein.
 
 ADMIN
 /admin.html
 Email: tanishaethnic@gmail.com
-Password: your Supabase admin user password
-
-NOTE ABOUT 8K
-Website supports high-resolution product images, but actual sharpness depends on the uploaded original photo. Use WebP/JPG originals with at least 3000 px height for best catalogue quality.
+Password: Supabase admin user password.

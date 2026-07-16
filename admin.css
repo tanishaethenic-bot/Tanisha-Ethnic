@@ -16,3 +16,14 @@
   #videosTab .title button{width:100%!important}
   #videoForm{display:grid!important;margin-top:16px!important}
 }
+
+
+/* V23 final admin video visibility and mobile controls */
+#videosTab{contain:none}
+#videosTab:not(.hidden){display:block!important;visibility:visible!important;opacity:1!important;background:#fff}
+#videosTab:not(.hidden)>.title,#videosTab:not(.hidden)>#videoAdminStatus,#videosTab:not(.hidden)>#videoRows,#videosTab:not(.hidden)>#videoForm{display:flex;visibility:visible!important;opacity:1!important}
+#videosTab:not(.hidden)>#videoRows{display:block!important;min-height:40px}
+#videosTab:not(.hidden)>#videoForm{display:grid!important}
+#videoForm input[type=file]{min-height:52px;background:#fff}
+#videoForm button,.videoAdminRow button{min-height:44px}
+@media(max-width:720px){#videosTab{min-height:720px!important}nav button{min-height:48px;font-size:16px}#videoForm{width:100%}}

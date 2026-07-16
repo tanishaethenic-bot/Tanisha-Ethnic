@@ -1,5 +1,5 @@
 'use strict';
-let products=[],offers=[],reviews=[],activeCategory='All',activeFabric='All',activeColor='All',currentProduct=null,currentSlide=0,slideTimer=null,deferredPrompt=null;
+let products=[],offers=[],reviews=[],videos=[],activeCategory='All',activeFabric='All',activeColor='All',currentProduct=null,currentSlide=0,slideTimer=null,deferredPrompt=null;
 let storeSettings={store_name:'Tanisha Ethnics',whatsapp_number:'918141152565',instagram_url:'https://www.instagram.com/tanisha.ethnic/',announcement_text:'Welcome to Tanisha Ethnics'};
 const fallbackImage='product-placeholder.svg';
 const el=id=>document.getElementById(id);
@@ -22,13 +22,21 @@ const updateProductUrl=id=>{const u=new URL(location.href);if(id)u.searchParams.
 function openSharedProduct(){const id=new URLSearchParams(location.search).get('product');if(id&&products.some(p=>String(p.id)===String(id)))openProduct(id,true)}
 function setWishlist(list){localStorage.setItem('te_wishlist_v3',JSON.stringify([...new Set(list.map(String))]));renderAll();renderWishlist();updateModalWish()}
 function toggleWish(id){const s=String(id),w=wishlist();const added=!w.includes(s);setWishlist(added?[...w,s]:w.filter(x=>x!==s));toast(added?'Added to wishlist':'Removed from wishlist')}
-async function loadStore(){el('statusText').textContent='Loading products…';const [s,o,p,r]=await Promise.all([
+async function loadStore(){el('statusText').textContent='Loading products…';const [s,o,p,r,v]=await Promise.all([
   supabaseClient.from('site_settings').select('*').order('id').limit(1).maybeSingle(),
   supabaseClient.from('offers').select('*').eq('active',true).order('created_at',{ascending:false}),
   supabaseClient.from('products').select('*').eq('active',true).order('featured',{ascending:false}).order('created_at',{ascending:false}),
   supabaseClient.from('reviews').select('*').eq('approved',true).order('created_at',{ascending:false}).limit(12)
 ]);
-if(s.data)storeSettings={...storeSettings,...s.data};offers=o.data||[];products=p.data||[];reviews=r.data||[];applySettings();renderHero();renderAll();renderWishlist();renderReviews();el('statusText').textContent=p.error?`Products load nahi hue: ${p.error.message}`:products.length?'':'Abhi koi product add nahi kiya gaya hai.';openSharedProduct()}
+if(s.data)storeSettings={...storeSettings,...s.data};offers=o.data||[];products=p.data||[];reviews=r.data||[];videos=v.data||[];applySettings();renderHero();renderAll();renderWishlist();renderReviews();renderVideos(v.error);el('statusText').textContent=p.error?`Products load nahi hue: ${p.error.message}`:products.length?'':'Abhi koi product add nahi kiya gaya hai.';openSharedProduct()}
+
+function renderVideos(error){
+  const grid=el('videoGrid'); if(!grid)return;
+  const cta=el('videoInstagramCta'); if(cta)cta.href=storeSettings.instagram_url||'https://www.instagram.com/tanisha.ethnic/';
+  if(error){grid.innerHTML=`<div class="videoEmpty"><b>Videos setup required</b><p>Admin me video upload enable karne ke liye V22 setup.sql ek baar run karein.</p></div>`;return}
+  grid.innerHTML=videos.map(v=>`<article class="videoCard"><div class="videoFrame"><video controls playsinline preload="metadata" poster="${esc(v.poster_url||'brand-round.png')}"><source src="${esc(v.video_url)}"></video></div><div class="videoMeta"><small>${esc(v.category||'TANISHA ETHNICS')}</small><h3>${esc(v.title||'Latest Video')}</h3>${v.caption?`<p>${esc(v.caption)}</p>`:''}</div></article>`).join('')||`<div class="videoEmpty"><b>New videos coming soon</b><p>Admin Panel → Videos se MP4 upload karein.</p></div>`;
+}
+
 function applySettings(){el('offerBar').textContent=storeSettings.announcement_text||'Welcome to Tanisha Ethnics';el('footerStore').textContent=storeSettings.store_name;const ig=storeSettings.instagram_url||'#',ph=cleanPhone(storeSettings.whatsapp_number),wa=`https://wa.me/${ph}`;['instagramTop','instagramFooter','menuInstagram','instagramCta'].forEach(i=>el(i)&& (el(i).href=ig));['whatsappTop','whatsappContact','whatsappFooter','floatingWa','menuWhatsApp','storyWhatsApp','newsletterWa'].forEach(i=>el(i)&& (el(i).href=wa));['phoneTop','phoneFooter'].forEach(i=>el(i).href=`tel:+${ph}`);const formatted=ph.startsWith('91')?`+91 ${ph.slice(2,7)} ${ph.slice(7)}`:`+${ph}`;['whatsappNumberText','whatsappFooterText','phoneNumberText','phoneFooterText'].forEach(i=>el(i).textContent=formatted)}
 function heroItems(){const now=new Date().toISOString().slice(0,10);const live=offers.filter(o=>(!o.start_date||o.start_date<=now)&&(!o.end_date||o.end_date>=now));const items=live.map((o,i)=>({title:o.title||'Special Offer',text:[o.subtitle,o.discount_text].filter(Boolean).join(' • '),image:o.banner_image||products[i%Math.max(products.length,1)]?.image_url||'logo-transparent.svg'}));if(!items.length)items.push({title:'Grace in Every Detail',text:'Premium ethnic styles for everyday elegance and celebrations.',image:products[0]?.image_url||'logo-transparent.svg'});return items}
 function renderHero(){const items=heroItems();el('heroSlides').innerHTML=items.map((x,i)=>`<article class="slide ${i===0?'active':''}"><div class="slideText"><small>PREMIUM ETHNIC WEAR</small><h1>${esc(x.title)}</h1><p>${esc(x.text)}</p><div class="heroActions"><a class="primaryBtn" href="#shop">Shop Collection</a><a class="heroLink" href="#wishlist">View Wishlist</a></div></div><div class="slideVisual"><div class="heroGlow"></div><img src="${esc(x.image)}" alt="${esc(x.title)}" onerror="this.src='${fallbackImage}'"></div></article>`).join('');el('slideDots').innerHTML=items.map((_,i)=>`<button data-slide="${i}" class="${i===0?'active':''}" aria-label="Slide ${i+1}"></button>`).join('');currentSlide=0;restartSlider()}
