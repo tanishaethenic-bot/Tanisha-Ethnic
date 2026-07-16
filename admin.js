@@ -1,12 +1,17 @@
 'use strict';
-const TANISHA_ADMIN_BUILD='V24-SUPABASE-SYNC';
+const TANISHA_ADMIN_BUILD='V25-ONE-CLICK-ADMIN';
 let currentProducts=[],currentSettingsId=null,currentOffers=[],currentReviews=[],currentVideos=[];
 const $=id=>document.getElementById(id),html=(v='')=>String(v).replace(/[&<>\'\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
 const showLogin=()=>{$('login').classList.remove('hidden');$('dash').classList.add('hidden')};
 const showDash=()=>{$('login').classList.add('hidden');$('dash').classList.remove('hidden');init()};
 supabaseClient.auth.getSession().then(({data})=>data.session?showDash():showLogin());
 $('showPassword').onclick=()=>{const p=$('password');p.type=p.type==='password'?'text':'password';$('showPassword').textContent=p.type==='password'?'Show':'Hide'};
-$('loginBtn').onclick=async()=>{$('loginStatus').textContent='Logging in…';const {error}=await supabaseClient.auth.signInWithPassword({email:$('email').value.trim(),password:$('password').value});if(error){$('loginStatus').textContent=error.message;return}$('loginStatus').textContent='';showDash()};
+function authValues(){return {email:$('email').value.trim().toLowerCase(),password:$('password').value}}
+function validateAuth(email,password){if(!email||!email.includes('@'))return 'Sahi email address likhein.';if(!password||password.length<6)return 'Password kam se kam 6 characters ka hona chahiye.';return ''}
+$('loginBtn').onclick=async()=>{const {email,password}=authValues(),v=validateAuth(email,password);if(v){$('loginStatus').textContent=v;return}$('loginStatus').textContent='Logging in…';const {error}=await supabaseClient.auth.signInWithPassword({email,password});if(error){$('loginStatus').textContent=error.message==='Invalid login credentials'?'Email/password match nahi hua. First time ho to Create Admin Account dabayein, ya Forgot Password use karein.':error.message;return}localStorage.setItem('tanisha_admin_email',email);$('loginStatus').textContent='';showDash()};
+$('createAdminBtn').onclick=async()=>{const {email,password}=authValues(),v=validateAuth(email,password);if(v){$('loginStatus').textContent=v;return}$('loginStatus').textContent='Admin account create ho raha hai…';const {data,error}=await supabaseClient.auth.signUp({email,password,options:{emailRedirectTo:location.origin+'/admin.html'}});if(error){$('loginStatus').textContent=error.message;return}localStorage.setItem('tanisha_admin_email',email);if(data.session){$('loginStatus').textContent='Admin account ban gaya. Dashboard khul raha hai…';showDash()}else{$('loginStatus').textContent='Account request successful. Email inbox/spam me confirmation link open karein, phir Login dabayein.'}};
+$('forgotPasswordBtn').onclick=async()=>{const email=$('email').value.trim().toLowerCase();if(!email||!email.includes('@')){$('loginStatus').textContent='Pehle email address likhein.';return}$('loginStatus').textContent='Password reset email bhej rahe hain…';const {error}=await supabaseClient.auth.resetPasswordForEmail(email,{redirectTo:location.origin+'/admin.html'});$('loginStatus').textContent=error?error.message:'Password reset link email par bhej diya. Inbox aur Spam check karein.'};
+const savedEmail=localStorage.getItem('tanisha_admin_email');if(savedEmail)$('email').value=savedEmail;
 $('logout').onclick=async()=>{await supabaseClient.auth.signOut();location.reload()};
 async function init(){
   console.info('Tanisha Admin',TANISHA_ADMIN_BUILD);
@@ -49,7 +54,7 @@ async function loadVideos(){
   if(form)form.style.display='grid';
   if(status)status.textContent='Loading videos…';
   const {data,error}=await supabaseClient.from('videos').select('*').order('created_at',{ascending:false});
-  if(error){if(status)status.textContent=`Videos setup missing: ${error.message}. V22 setup.sql run karein.`;return}
+  if(error){if(status)status.textContent=`Videos setup missing: ${error.message}. V25 setup.sql Supabase SQL Editor me run karein.`;return}
   currentVideos=data||[]; if(status)status.textContent=`${currentVideos.length} video(s)`;
   if(!rows)return;
   rows.innerHTML=currentVideos.map(v=>`<div class="videoAdminRow"><video src="${html(v.video_url)}" muted playsinline preload="metadata"></video><div><b>${html(v.title)}</b><p>${html(v.category||'')} ${v.active?'• Visible':'• Hidden'}</p><small>${html(v.caption||'')}</small></div><div class="actions"><button data-video-edit="${v.id}">Edit</button><button class="delete" data-video-delete="${v.id}">Delete</button></div></div>`).join('')||'<p class="empty">No videos yet. + Add Video dabayein.</p>';

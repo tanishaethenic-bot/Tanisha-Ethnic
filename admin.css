@@ -27,3 +27,5 @@
 #videoForm input[type=file]{min-height:52px;background:#fff}
 #videoForm button,.videoAdminRow button{min-height:44px}
 @media(max-width:720px){#videosTab{min-height:720px!important}nav button{min-height:48px;font-size:16px}#videoForm{width:100%}}
+
+.authActions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.authActions button{border:1px solid #ccb7a8;background:#fff;color:#402316;border-radius:14px;padding:13px 10px;font-weight:700}.authHint{font-size:14px;line-height:1.5;background:#fff8ef;border:1px solid #ead8c8;border-radius:14px;padding:12px;margin:12px 0;color:#6b4b3c}@media(max-width:480px){.authActions{grid-template-columns:1fr}}
