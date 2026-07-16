@@ -1,4 +1,4 @@
-const CACHE='tanisha-v23-final-1-20260716';
+const CACHE='tanisha-v24-supabase-sync-20260716';
 const CORE=['/','/index.html','/styles.css','/app.js','/config.js','/brand-round.png','/brand-transparent.png','/product-placeholder.svg','/manifest.webmanifest'];
 self.addEventListener('install',event=>{self.skipWaiting();event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE)))});
 self.addEventListener('activate',event=>{event.waitUntil(Promise.all([self.clients.claim(),caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key))))]))});

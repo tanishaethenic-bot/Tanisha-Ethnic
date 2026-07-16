@@ -1,5 +1,5 @@
 'use strict';
-const TANISHA_ADMIN_BUILD='V23-FINAL-1';
+const TANISHA_ADMIN_BUILD='V24-SUPABASE-SYNC';
 let currentProducts=[],currentSettingsId=null,currentOffers=[],currentReviews=[],currentVideos=[];
 const $=id=>document.getElementById(id),html=(v='')=>String(v).replace(/[&<>\'\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
 const showLogin=()=>{$('login').classList.remove('hidden');$('dash').classList.add('hidden')};

@@ -1,28 +1,24 @@
-TANISHA ETHNICS V23 — FINAL VIDEO TAB FIX BUILD
+TANISHA ETHNICS V24 — SUPABASE SYNC FINAL BUILD
 
-MAIN FIX
-- Admin Videos tab blank screen fixed.
-- admin.js, admin.html and admin.css all have new V23 content and cache-busting URLs.
-- Opening Videos always restores the panel and loads Supabase video records.
-- Add Video form remains visible even when there are zero videos.
-- Upload MP4/WebM, edit, show/hide and delete retained.
-- Website video section, products, offers, reviews, cart, wishlist and PWA retained.
+WHAT IS FIXED
+- Website and Admin now connect to the correct Supabase project: cxydymcjgxgcdqgltnii.
+- Correct publishable key added in config.js.
+- Videos tab blank-panel fix from V23 retained.
+- Video upload, edit, show/hide and delete code retained.
+- New V24 cache-busting and service-worker cache version added.
 
-DEPLOY
+IMPORTANT FIRST-TIME DATABASE SETUP
+This correct Supabase project currently has no tables. Supabase SQL Editor me is ZIP ka complete setup.sql ek baar Run karein. Isse products, offers, site_settings, reviews, videos and storage buckets create honge.
+
+ADMIN USER
+Supabase Authentication > Users me tanishaethnic@gmail.com admin user isi correct project me create/invite karein. Password wahi hoga jisse Admin Panel me login karenge.
+
+GITHUB DEPLOY
 1. ZIP extract karein.
-2. Extracted folder ke ANDAR ki all files GitHub repository root me upload/replace karein.
-3. Make sure admin.js, app.js, service-worker.js bhi selected hon.
-4. Commit message: Tanisha Ethnics V23 final video fix
-5. Netlify deploy complete hone ke baad admin.html?tab=videos open karein.
+2. Extracted folder ke andar ki saari files GitHub repository root me upload/replace karein.
+3. Commit directly to main.
+4. Commit message: Tanisha Ethnics V24 Supabase sync final
+5. Netlify automatically deploy karega.
 
-CACHE
-Chrome me site data clear karein ya old installed PWA uninstall karke reinstall karein.
-V23 files use unique ?v=23-final-1 URLs, isliye old V15/V22 JavaScript reuse nahi hona chahiye.
-
-SUPABASE
-V22 setup.sql success se run ho chuka hai to dobara zaroori nahi. Missing-table error aaye tabhi setup.sql run karein.
-
-ADMIN
-/admin.html
-Email: tanishaethnic@gmail.com
-Password: Supabase admin user password.
+AFTER DEPLOY
+Old installed PWA uninstall karein ya site data clear karein, phir website/admin dobara kholen.
