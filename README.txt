@@ -1,26 +1,25 @@
-TANISHA ETHNICS V21 — FINAL ULTIMATE GITHUB BUILD
+TANISHA ETHNICS V22 — CLEAN FINAL VIDEO MANAGER BUILD
 
-ONE-TIME GITHUB UPDATE
-1. Is ZIP ko phone me Extract karein.
-2. Extracted folder ke ANDAR ki saari files GitHub repository ke root me upload/replace karein.
-3. Commit directly to main branch.
-4. Commit message: Tanisha Ethnics V21 final ultimate
-5. Netlify automatically deploy karega.
+FIXED
+- Admin Videos tab now fully working: upload MP4/WebM, edit, hide/show and delete.
+- Website loads active videos from Supabase.
+- Missing videos table/storage SQL added.
+- Admin tab switching includes Videos.
+- Supabase preconnect corrected.
+- PWA cache bumped to V22.
+- Premium responsive media rendering retained.
 
-WHAT IS FIXED
-- Mobile side menu: independent safety fallback + normal app handler.
-- Admin Videos tab: Add/Edit/Delete/Hide and Supabase Storage upload.
-- Website Videos section: Supabase videos load with clear empty/error state.
-- New Supabase project is connected in config.js.
-- Desktop-style premium mobile layout retained.
-- Cart, wishlist, search, filters, product details, reviews and PWA retained.
-- Cache version updated to V21.
+IMPORTANT ONE-TIME STEP
+Supabase SQL Editor me setup.sql poora ek baar Run karein. It is safe to re-run. This creates videos table and store-videos bucket.
+
+DEPLOY
+Extract ZIP, upload all files inside to GitHub repository root, commit to main. Netlify auto deploys.
+After deploy, uninstall old installed app and reinstall to clear old PWA cache.
 
 ADMIN
-URL: /admin.html
+/admin.html
 Email: tanishaethnic@gmail.com
-Password: the password used while creating the Supabase admin user.
+Password: your Supabase admin user password
 
-IMPORTANT
-- setup.sql was already run: do not run it again unless Admin Videos says setup is missing.
-- After deployment, uninstall the old installed app once and install it again to remove old PWA cache.
+NOTE ABOUT 8K
+Website supports high-resolution product images, but actual sharpness depends on the uploaded original photo. Use WebP/JPG originals with at least 3000 px height for best catalogue quality.

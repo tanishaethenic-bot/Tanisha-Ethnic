@@ -394,3 +394,10 @@ main>section:not(.heroSlider):not(.trustRow):not(.brandStorySection), footer{max
   .brand img{max-width:155px!important;height:50px!important}
   .slide{padding-inline:14px!important}.slide h1{font-size:37px!important}.slideVisual img{max-height:260px!important}
 }
+
+
+/* V22 clean premium media quality */
+img,video{image-rendering:auto;-webkit-font-smoothing:antialiased}
+.productCard .imageWrap img,.slideVisual img{object-position:center;filter:saturate(1.02) contrast(1.015)}
+.videoFrame video{background:#100704;object-fit:cover}
+@media(min-width:1200px){.section{max-width:1440px}.productGrid{grid-template-columns:repeat(4,minmax(0,1fr))}.heroSlider{min-height:650px}}
