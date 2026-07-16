@@ -401,3 +401,13 @@ img,video{image-rendering:auto;-webkit-font-smoothing:antialiased}
 .productCard .imageWrap img,.slideVisual img{object-position:center;filter:saturate(1.02) contrast(1.015)}
 .videoFrame video{background:#100704;object-fit:cover}
 @media(min-width:1200px){.section{max-width:1440px}.productGrid{grid-template-columns:repeat(4,minmax(0,1fr))}.heroSlider{min-height:650px}}
+
+/* V30 launch fixes */
+.brand img{width:72px!important;height:72px!important;border-radius:50%!important;object-fit:contain!important;background:#050505}
+.brand span{display:flex!important}.brand b{font-size:15px;letter-spacing:1.4px}.brand small{font-size:10px}
+#cartCount.hidden,#bottomCartCount.hidden{display:none!important}
+.bottomNav button{position:relative}.bottomNav #bottomCartCount{position:absolute;right:18%;top:8px;min-width:22px;height:22px;display:grid;place-items:center;border-radius:999px;background:#c33445;color:white;font-style:normal;font-size:11px;font-weight:800}
+@media(max-width:600px){.brand img{width:58px!important;height:58px!important}.brand b{font-size:12px}.brand small{font-size:8px}.siteHeader{grid-template-columns:46px minmax(0,1fr) auto}.headerActions #searchBtn,.headerActions #cartBtn{width:46px!important;height:46px!important}}
+
+/* V30 coupon manager */
+.couponBox{display:grid;grid-template-columns:1fr auto;gap:8px}.couponBox small{grid-column:1/-1;min-height:18px;color:#765f53}.cartSummary{display:grid;gap:8px}.cartSummary>div{display:flex;justify-content:space-between;align-items:center}.discountLine{color:#178447}.couponCode{display:inline-block;background:#2d1710;color:#fff;border:1px dashed #d7ad72;padding:8px 11px;border-radius:8px;font-weight:800;letter-spacing:1px}.couponRow{grid-template-columns:120px 1.5fr .6fr .9fr auto}@media(max-width:760px){.couponRow{grid-template-columns:1fr}.couponRow>div:first-child{margin-top:6px}.couponBox{grid-template-columns:1fr auto}}

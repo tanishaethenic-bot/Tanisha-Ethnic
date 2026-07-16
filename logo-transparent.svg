@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 250" role="img" aria-label="Tanisha Ethnics">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 250" role="img" aria-label="Tanisha Ethnic">
 <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7a4a2e"/><stop offset="1" stop-color="#b7874f"/></linearGradient></defs>
 <rect width="900" height="250" fill="none"/>
 <g transform="translate(22 22)"><circle cx="103" cy="103" r="96" fill="#fffaf5" stroke="url(#g)" stroke-width="7"/><path d="M103 32c-29 0-52 23-52 52 0 31 25 45 52 78 27-33 52-47 52-78 0-29-23-52-52-52Zm0 22c17 0 30 13 30 30 0 16-12 27-30 48-18-21-30-32-30-48 0-17 13-30 30-30Z" fill="url(#g)"/><path d="M55 170c31 16 65 16 96 0" fill="none" stroke="#c88291" stroke-width="6" stroke-linecap="round"/></g>
