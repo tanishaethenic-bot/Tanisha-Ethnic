@@ -1,27 +1,7 @@
 {
-  "version": "V30-COUPON-MANAGER-REVIEWED",
-  "date": "2026-07-16",
+  "version": "FINAL-REVIEWED-2026-07-17",
+  "database_project": "aecescczeizgssmderdw",
   "brand": "Tanisha Ethnic",
-  "admin_auth": "login-only",
-  "features": [
-    "admin coupon CRUD",
-    "percentage/fixed/free shipping coupons",
-    "minimum order",
-    "maximum discount",
-    "start and expiry dates",
-    "WhatsApp coupon summary"
-  ],
-  "fixes": [
-    "menu",
-    "zero badges hidden",
-    "singular branding",
-    "video manager retained"
-  ],
-  "reviewed_fixes": [
-    "missing menu-safety reference removed",
-    "single menu handler",
-    "zero badges hidden",
-    "logo cropped and icons regenerated",
-    "service worker install fixed"
-  ]
+  "menu": "single-controller",
+  "logo": "vector-svg"
 }

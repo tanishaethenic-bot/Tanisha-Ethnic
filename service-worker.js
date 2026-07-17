@@ -1,5 +1,5 @@
-const CACHE='tanisha-v30-coupons-reviewed-20260716';
-const CORE=['/','/index.html','/styles.css','/app.js','/config.js','/brand-round.png','/brand-transparent.png','/product-placeholder.svg','/manifest.webmanifest'];
+const CACHE='tanisha-ethnic-final-reviewed-20260717-1';
+const CORE=['/','/index.html','/styles.css','/app.js','/menu.js','/config.js','/brand-mark.svg','/brand-wordmark.svg','/product-placeholder.svg','/manifest.webmanifest'];
 self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE)))});
 self.addEventListener('activate',e=>{e.waitUntil(Promise.all([self.clients.claim(),caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k))))]))});
 self.addEventListener('fetch',e=>{

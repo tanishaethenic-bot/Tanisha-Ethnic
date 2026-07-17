@@ -1,24 +1,19 @@
-TANISHA ETHNIC V30 — COUPON MANAGER REVIEWED BUILD
+TANISHA ETHNIC — FINAL REVIEWED LAUNCH BUILD
 
-CODE REVIEW FIXES
-- Removed missing menu-safety.js reference. Only one menu controller remains in app.js.
-- Service worker no longer caches a nonexistent file, so install should not fail.
-- Menu closes on backdrop, link, close button and Escape; aria state is updated.
-- Cart and Wishlist zero badges are hidden.
-- Black-gold logo was tightly cropped; 192, 512 and Apple icons regenerated at correct sizes.
-- Brand name is consistently Tanisha Ethnic.
-- Admin is login-only: no Create Admin and no Forgot Password.
-- Coupon CRUD, cart coupon validation and WhatsApp discount summary are included.
-- Video CRUD/upload code and V30 SQL table/storage setup are included.
+FIXED
+- Single independent menu controller (no duplicate handlers).
+- Crisp vector logo/wordmark and correct app icons.
+- Brand name singular everywhere: Tanisha Ethnic.
+- Products remain connected to Supabase project aecescczeizgssmderdw.
+- Coupons migration supports old and new column names/types.
+- Videos table/storage setup retained.
+- Cart and wishlist zero badges remain hidden.
+- Admin is login-only.
 
-CONNECTED DATABASE
-This build intentionally uses project aecescczeizgssmderdw because it is the project that previously contained the existing products.
-Run this build's setup.sql in THAT SAME project to add videos and coupons without deleting products.
-The admin email must exist under Authentication > Users in that same project.
+IMPORTANT DATABASE STEP
+Run setup.sql in the SAME Supabase project shown in admin: aecescczeizgssmderdw.
+Running it in a different project will not affect this website. Existing products are not deleted.
 
 DEPLOY
-1. Extract the ZIP.
-2. Upload/replace every file in GitHub repository root.
-3. Commit: Tanisha Ethnic V30 coupon manager reviewed
-4. Let Netlify publish.
-5. Clear old site data / uninstall old PWA once, then reopen.
+Extract ZIP and replace every GitHub root file. Commit: Tanisha Ethnic final reviewed launch.
+After Netlify publishes, clear site data or uninstall the old PWA once.

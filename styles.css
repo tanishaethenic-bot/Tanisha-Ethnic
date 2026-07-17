@@ -411,3 +411,15 @@ img,video{image-rendering:auto;-webkit-font-smoothing:antialiased}
 
 /* V30 coupon manager */
 .couponBox{display:grid;grid-template-columns:1fr auto;gap:8px}.couponBox small{grid-column:1/-1;min-height:18px;color:#765f53}.cartSummary{display:grid;gap:8px}.cartSummary>div{display:flex;justify-content:space-between;align-items:center}.discountLine{color:#178447}.couponCode{display:inline-block;background:#2d1710;color:#fff;border:1px dashed #d7ad72;padding:8px 11px;border-radius:8px;font-weight:800;letter-spacing:1px}.couponRow{grid-template-columns:120px 1.5fr .6fr .9fr auto}@media(max-width:760px){.couponRow{grid-template-columns:1fr}.couponRow>div:first-child{margin-top:6px}.couponBox{grid-template-columns:1fr auto}}
+
+/* FINAL REVIEWED OVERRIDES */
+.brand img{image-rendering:auto!important;filter:none!important}
+.brand img[src$="brand-wordmark.svg"]{width:min(42vw,190px)!important;height:58px!important;object-fit:contain!important;object-position:left center!important}
+.drawerBrand img,.footerBrand img,.loaderGlow img,.storyVisual img,.festivalPopup img{image-rendering:auto!important}
+#menuBtn{position:relative!important;z-index:122!important;touch-action:manipulation!important;pointer-events:auto!important}
+#mainNav.sideDrawer{display:flex!important;position:fixed!important;top:0!important;bottom:0!important;left:0!important;right:auto!important;width:min(88vw,390px)!important;height:100dvh!important;transform:translate3d(-105%,0,0)!important;visibility:visible!important;opacity:1!important;pointer-events:none!important;z-index:121!important;transition:transform .28s ease!important}
+#mainNav.sideDrawer.open{transform:translate3d(0,0,0)!important;pointer-events:auto!important}
+#menuBackdrop.menuBackdrop{position:fixed!important;inset:0!important;z-index:120!important;opacity:0!important;visibility:hidden!important;pointer-events:none!important}
+#menuBackdrop.menuBackdrop.open{opacity:1!important;visibility:visible!important;pointer-events:auto!important}
+#closeMenu{touch-action:manipulation!important;cursor:pointer!important}
+.dbLabel{display:block;margin-top:4px;opacity:.65;font-size:11px;letter-spacing:.4px}

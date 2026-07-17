@@ -1,11 +1,11 @@
 {
-  "name": "Tanisha Ethnic – Premium Ethnic Wear",
+  "name": "Tanisha Ethnic Premium Retail Store",
   "short_name": "Tanisha Ethnic",
   "start_url": "/?source=pwa",
   "display": "standalone",
   "background_color": "#090909",
   "theme_color": "#090909",
-  "description": "Premium ethnic wear, festive collections and WhatsApp ordering from Ahmedabad.",
+  "description": "Premium ethnic wear by Tanisha Ethnic, Ahmedabad.",
   "icons": [
     {
       "src": "favicon-192.png",
