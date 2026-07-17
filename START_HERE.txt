@@ -1,6 +1,13 @@
-1) Confirm Supabase project URL contains: cxydymcjgxgcdqgltnii
-2) Run setup.sql in that project.
-3) Upload all V31 files to GitHub root and commit.
-4) Wait for Netlify publish.
-5) Clear Chrome site data for tanishaethnics.netlify.app.
-6) Open /?v31=1 and /admin.html?v31=1.
+TANISHA ETHNIC V32 PREMIUM FINAL
+
+1. GitHub repository root me is folder ki SAARI files upload/replace karein.
+2. Commit message: Tanisha Ethnic V32 premium final
+3. Netlify Published hone ka wait karein.
+4. Chrome > Site settings > tanishaethnics.netlify.app > Clear & reset.
+5. Website open karein: /?v32=1
+6. Admin open karein: /admin.html?v32=1
+
+IMPORTANT
+- Supabase project: cxydymcjgxgcdqgltnii
+- setup.sql dobara run karna safe hai, lekin products table abhi empty hai; products admin se naye add karein.
+- Same coupon code dobara save karne par ab existing coupon update hoga.

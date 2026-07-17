@@ -1,0 +1,12 @@
+TANISHA ETHNIC V35 ULTIMATE FINAL
+
+- Mobile side menu forced above header, banner, slider and all page content.
+- Menu backdrop click, close button, Escape key and scroll lock retained.
+- Header overflow fixed so drawer cannot be clipped.
+- Floral branding and PWA icons retained from V33/V34.
+- Coupon duplicate-code handling retained with upsert logic.
+- Cache/version references bumped to V35.
+- CSS and JavaScript syntax checked.
+
+Deploy the CONTENTS of this folder to the repository root.
+After Netlify deploy, clear site data once or open the site in an Incognito tab.
