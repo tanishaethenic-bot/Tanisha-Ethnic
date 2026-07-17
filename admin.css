@@ -29,3 +29,14 @@
 @media(max-width:720px){#videosTab{min-height:720px!important}nav button{min-height:48px;font-size:16px}#videoForm{width:100%}}
 
 .authActions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.authActions button{border:1px solid #ccb7a8;background:#fff;color:#402316;border-radius:14px;padding:13px 10px;font-weight:700}.authHint{font-size:14px;line-height:1.5;background:#fff8ef;border:1px solid #ead8c8;border-radius:14px;padding:12px;margin:12px 0;color:#6b4b3c}@media(max-width:480px){.authActions{grid-template-columns:1fr}}
+
+/* V32 PREMIUM FINAL ADMIN BRANDING */
+.loginCard img{width:112px!important;height:112px!important;object-fit:contain!important;border-radius:50%!important;filter:none!important}
+header:before{content:"";width:58px;height:58px;flex:0 0 58px;background:url('brand-mark.svg') center/contain no-repeat}
+header{justify-content:flex-start!important;gap:14px!important}
+header>div:last-child{margin-left:auto!important}
+.dbLabel{display:block!important;margin-top:5px!important;font-size:11px!important;opacity:.68!important}
+@media(max-width:720px){header:before{width:50px;height:50px;flex-basis:50px}header>div:last-child{margin-left:0!important;width:100%!important}}
+
+/* V33 floral logo */
+.loginCard img{width:116px!important;height:116px!important;object-fit:contain!important;border-radius:50%!important;background:#050505}
