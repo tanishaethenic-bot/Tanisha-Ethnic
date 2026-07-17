@@ -1,16 +1,6 @@
-TANISHA ETHNICS V26 ULTIMATE FINAL
-
-FIRST-TIME SETUP
-1. Supabase project cxydymcjgxgcdqgltnii open karein.
-2. SQL Editor me setup.sql poora Run karein.
-3. GitHub repository root me is folder ki SAARI files replace/upload karein.
-4. Commit: Tanisha Ethnics V26 ultimate final
-5. Netlify deploy complete hone dein.
-6. /admin.html?fresh=v26 kholo.
-7. First time: email + 6+ character password likhkar Create Admin Account dabayein.
-8. Confirmation email aaye to link open karein. Email issue ho to Email Login Link use karein.
-
-IMPORTANT
-- Secret/service_role key kabhi website files me mat daalein.
-- config.js me sirf publishable key hai.
-- Old installed PWA uninstall ya site data clear karna recommended hai.
+1) Confirm Supabase project URL contains: cxydymcjgxgcdqgltnii
+2) Run setup.sql in that project.
+3) Upload all V31 files to GitHub root and commit.
+4) Wait for Netlify publish.
+5) Clear Chrome site data for tanishaethnics.netlify.app.
+6) Open /?v31=1 and /admin.html?v31=1.

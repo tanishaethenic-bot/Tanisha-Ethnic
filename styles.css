@@ -423,3 +423,12 @@ img,video{image-rendering:auto;-webkit-font-smoothing:antialiased}
 #menuBackdrop.menuBackdrop.open{opacity:1!important;visibility:visible!important;pointer-events:auto!important}
 #closeMenu{touch-action:manipulation!important;cursor:pointer!important}
 .dbLabel{display:block;margin-top:4px;opacity:.65;font-size:11px;letter-spacing:.4px}
+
+/* V31 stable mobile menu — final override */
+#menuBtn{position:relative;z-index:10002;touch-action:manipulation;pointer-events:auto!important}
+#mainNav.sideDrawer{display:flex!important;position:fixed!important;top:0!important;bottom:0!important;left:0!important;right:auto!important;width:min(88vw,380px)!important;height:100dvh!important;z-index:10001!important;visibility:visible!important;opacity:1!important;transform:translate3d(-105%,0,0)!important;transition:transform .28s ease!important;pointer-events:none!important;overflow-y:auto!important;background:#fff!important}
+#mainNav.sideDrawer.open{transform:translate3d(0,0,0)!important;pointer-events:auto!important}
+#menuBackdrop.menuBackdrop{display:block!important;position:fixed!important;inset:0!important;z-index:10000!important;background:rgba(0,0,0,.68)!important;opacity:0!important;visibility:hidden!important;pointer-events:none!important;transition:opacity .25s ease,visibility .25s ease!important}
+#menuBackdrop.menuBackdrop.open{opacity:1!important;visibility:visible!important;pointer-events:auto!important}
+html.menuOpen,html.menuOpen body{overflow:hidden!important}
+.brand img[src$="brand-wordmark.svg"],.brand img[src$="logo-transparent.svg"]{image-rendering:auto;filter:none!important}

@@ -1,19 +1,25 @@
-TANISHA ETHNIC — FINAL REVIEWED LAUNCH BUILD
+TANISHA ETHNIC V31 — STABLE FINAL
 
 FIXED
-- Single independent menu controller (no duplicate handlers).
-- Crisp vector logo/wordmark and correct app icons.
-- Brand name singular everywhere: Tanisha Ethnic.
-- Products remain connected to Supabase project aecescczeizgssmderdw.
-- Coupons migration supports old and new column names/types.
-- Videos table/storage setup retained.
-- Cart and wishlist zero badges remain hidden.
-- Admin is login-only.
-
-IMPORTANT DATABASE STEP
-Run setup.sql in the SAME Supabase project shown in admin: aecescczeizgssmderdw.
-Running it in a different project will not affect this website. Existing products are not deleted.
+- Website and Admin connected to active Supabase project cxydymcjgxgcdqgltnii.
+- Independent mobile menu controller plus final CSS override.
+- Crisp SVG header/admin logo and correct PWA icons.
+- Products, Videos and Coupons use the same database project.
+- Admin is login-only: no Create Admin and no Forgot Password.
+- Cart/Wishlist zero badges remain hidden.
+- Cache version reset to V31.
 
 DEPLOY
-Extract ZIP and replace every GitHub root file. Commit: Tanisha Ethnic final reviewed launch.
-After Netlify publishes, clear site data or uninstall the old PWA once.
+1. Extract this ZIP.
+2. Upload/replace every file in GitHub repository root.
+3. Commit: Tanisha Ethnic V31 stable final
+4. Wait for Netlify Published status.
+5. In Supabase project cxydymcjgxgcdqgltnii run setup.sql once.
+6. Clear old site data/PWA and open the website again.
+
+VERIFY
+- Menu opens and closes.
+- Existing products load.
+- Admin Videos tab lists or shows an empty state without schema error.
+- Admin Coupons tab shows WELCOME10.
+- Upload one small MP4 and verify it appears on the storefront.

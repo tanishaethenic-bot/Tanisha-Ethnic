@@ -190,3 +190,11 @@ insert into public.coupons(code,description,discount_type,discount_value,minimum
 values('WELCOME10','10% off on your first order','percent',10,500,300,true)
 on conflict(code) do update set description=excluded.description,discount_type=excluded.discount_type,discount_value=excluded.discount_value,minimum_order=excluded.minimum_order,maximum_discount=excluded.maximum_discount,active=excluded.active;
 notify pgrst,'reload schema';
+
+-- V31 FINAL VERIFICATION
+-- The website config must use project: cxydymcjgxgcdqgltnii
+notify pgrst, 'reload schema';
+select 'V31 setup complete' as status,
+       to_regclass('public.products') as products_table,
+       to_regclass('public.videos') as videos_table,
+       to_regclass('public.coupons') as coupons_table;
