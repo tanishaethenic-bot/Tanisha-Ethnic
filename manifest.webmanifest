@@ -8,7 +8,7 @@
   "description": "Premium ethnic wear by Tanisha Ethnic, Ahmedabad.",
   "icons": [
     {
-      "src": "favicon-192.png",
+      "src": "icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
@@ -50,5 +50,9 @@
         }
       ]
     }
-  ]
+  ],
+  "id": "/",
+  "lang": "en-IN",
+  "dir": "ltr",
+  "prefer_related_applications": false
 }

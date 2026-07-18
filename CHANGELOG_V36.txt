@@ -1,0 +1,9 @@
+TANISHA ETHNIC V36 — MOBILE PRODUCT DETAILS FIX
+
+FIXED
+- Bottom app navigation no longer covers product details.
+- Product modal is always above all fixed navigation.
+- Close button stays visible while scrolling.
+- Product image sizing improved on mobile.
+- Removed excessive blank safe-area spacing.
+- Updated PWA cache to V36.

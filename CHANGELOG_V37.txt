@@ -1,0 +1,10 @@
+TANISHA ETHNIC V37 — PREMIUM PRODUCT GALLERY
+
+- Product details now opens with a full-width/full-height product image.
+- All available product photos appear as small thumbnails below the main image.
+- Thumbnail tap changes main image.
+- Previous/next arrows and image counter added.
+- Mobile swipe left/right supported.
+- Full-screen zoom viewer with arrows, counter and swipe.
+- Bottom navigation hides while product details is open.
+- Mobile spacing and product detail layout polished.

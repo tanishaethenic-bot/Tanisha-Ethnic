@@ -1,0 +1,18 @@
+TANISHA ETHNIC V38 — FINAL LAUNCH EDITION
+
+FINALIZED
+- Full product image gallery with thumbnails, image counter, arrows and mobile swipe.
+- Full-screen image viewer with previous/next controls.
+- Product modal hides mobile bottom navigation to prevent overlap.
+- PWA cache upgraded to V38 and duplicate cache entries removed.
+- Manifest, app icons and install flow retained.
+- Canonical, Open Graph, robots.txt and sitemap set to the current Netlify production URL.
+- OnlineStore structured data added for Google.
+- Admin and frontend asset versions updated to prevent old cached files.
+- JavaScript syntax and required-file checks passed.
+
+NEXT STEPS ONLY
+1. Upload extracted files to GitHub and commit.
+2. Confirm successful Netlify deploy.
+3. Uninstall the old PWA and reinstall from Chrome once.
+4. Add the site to Google Search Console and submit sitemap.xml.

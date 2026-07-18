@@ -1,1 +1,5 @@
-{"name":"Tanisha Ethnic","version":"V35 Ultimate Final","build":"2026-07-17","notes":"Stable mobile drawer above hero, floral branding, coupon upsert and cache refresh."}
+{
+  "version": "V39 True Final Launch",
+  "build": "2026-07-18",
+  "status": "launch-ready"
+}

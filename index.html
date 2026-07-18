@@ -10,18 +10,36 @@
   <meta property="og:title" content="Tanisha Ethnic | Premium Ethnic Wear">
   <meta property="og:description" content="Elegant ethnic styles, new arrivals and festive collections from Ahmedabad, Gujarat.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://tanishaethnic.in/">
-  <meta property="og:image" content="https://tanishaethnic.in/brand-round.png">
+  <meta property="og:url" content="https://tanishaethnics.netlify.app/">
+  <meta property="og:image" content="https://tanishaethnics.netlify.app/brand-round.png">
   <meta property="og:image:width" content="1024">
   <meta property="og:image:height" content="1024">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://tanishaethnic.in/">
+  <link rel="canonical" href="https://tanishaethnics.netlify.app/">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" type="image/png" href="favicon-192.png"><link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="https://cxydymcjgxgcdqgltnii.supabase.co" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=35-menu-layer-fix">
-  <!-- Tanisha Ethnic V35 Coupon Manager Reviewed Edition -->
+  <link rel="stylesheet" href="styles.css?v=39-true-final">
+  <!-- Tanisha Ethnic V38 Final Launch Edition -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "OnlineStore",
+    "name": "Tanisha Ethnic",
+    "url": "https://tanishaethnics.netlify.app/",
+    "logo": "https://tanishaethnics.netlify.app/brand-round.png",
+    "email": "tanishaethnic@gmail.com",
+    "telephone": "+91-81411-52565",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ahmedabad",
+      "addressRegion": "Gujarat",
+      "addressCountry": "IN"
+    },
+    "sameAs": ["https://www.instagram.com/tanisha.ethnic/"]
+  }
+  </script>
 </head>
 <body>
   <div id="brandLoader" class="brandLoader" aria-hidden="true"><div class="loaderGlow"><img src="brand-round.png" alt=""><span></span></div></div>
@@ -74,7 +92,7 @@
     <section id="trending" class="section darkSection"><div class="sectionHeading"><div><small>CURATED FOR YOU</small><h2>Trending Collection</h2></div><a href="#shop">Explore all →</a></div><div id="trendingGrid" class="productGrid"></div></section>
 
     <section id="shop" class="section shopSection">
-      <div class="shopHead"><div><small>COMPLETE COLLECTION</small><h2>All Products</h2></div><div class="filters"><input id="search" type="search" placeholder="Search name, design or category"><select id="priceFilter"><option value="all">All Prices</option><option value="under1000">Under ₹1,000</option><option value="1000to2000">₹1,000–₹2,000</option><option value="above2000">Above ₹2,000</option></select><select id="colorFilter"><option value="all">All Colours</option></select><select id="sort"><option value="featured">Featured</option><option value="new">Newest</option><option value="low">Price: Low to High</option><option value="high">Price: High to Low</option><option value="discount">Best Discount</option></select></div></div>
+      <div class="shopHead"><div><small>COMPLETE COLLECTION</small><h2>All Products</h2></div><div class="filters"><input id="search" type="search" list="searchSuggestions" autocomplete="off" placeholder="Search name, design or category"><datalist id="searchSuggestions"></datalist><select id="priceFilter"><option value="all">All Prices</option><option value="under1000">Under ₹1,000</option><option value="1000to2000">₹1,000–₹2,000</option><option value="above2000">Above ₹2,000</option></select><select id="colorFilter"><option value="all">All Colours</option></select><select id="sort"><option value="featured">Featured</option><option value="new">Newest</option><option value="low">Price: Low to High</option><option value="high">Price: High to Low</option><option value="discount">Best Discount</option></select></div></div>
       <p id="statusText" class="statusText">Loading products…</p><div id="productGrid" class="productGrid"></div>
     </section>
 
@@ -104,11 +122,11 @@
   <a id="floatingWa" class="floatingWa" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg><use href="#i-whatsapp"/></svg></a>
   <footer><div class="footerBrand"><img src="brand-round.png" alt="Tanisha Ethnic"><div><b id="footerStore">Tanisha Ethnic</b><p class="footerStory">Premium ethnic wear curated for everyday elegance, festive moments and special celebrations.</p><small>Ahmedabad, Gujarat</small><div class="footerPolicies"><a href="#policy">Privacy</a><a href="#policy">Terms</a><a href="#policy">Returns</a><a href="#policy">Shipping</a></div></div></div><div class="footerLinks"><a href="#new">New Arrivals</a><a href="#best">Best Sellers</a><a href="#videos">Instagram Videos</a><a href="#wishlist">Wishlist</a><a href="admin.html">Admin Login</a></div><div class="footerContacts"><a id="instagramFooter" class="withIcon" target="_blank" rel="noopener"><svg><use href="#i-instagram"/></svg>Instagram</a><a id="whatsappFooter" class="withIcon" target="_blank" rel="noopener"><svg><use href="#i-whatsapp"/></svg><span id="whatsappFooterText">+91 81411 52565</span></a><a id="phoneFooter" class="withIcon" href="tel:+918141152565"><svg><use href="#i-phone"/></svg><span id="phoneFooterText">+91 81411 52565</span></a><a class="withIcon" href="mailto:tanishaethnic@gmail.com"><svg><use href="#i-mail"/></svg>tanishaethnic@gmail.com</a></div></footer>
 
-  <div id="modal" class="modal" aria-hidden="true"><div class="modalCard"><button id="closeModal" class="closeBtn">×</button><div class="gallery"><div class="mainImageBox"><img id="modalImage" alt="Product"><button id="zoomBtn" class="zoomBtn">🔍 Zoom</button></div><div id="thumbs" class="thumbs"></div></div><div class="productDetails"><small id="modalCategory"></small><h2 id="modalName"></h2><div class="modalPriceRow"><h3 id="modalPrice"></h3><del id="modalMrp"></del><span id="modalDiscount"></span></div><p id="modalDescription"></p><div class="detailGrid"><p><b>Design</b><span id="modalDesign"></span></p><p><b>Sizes</b><span id="modalSizes"></span></p><p><b>Colours</b><span id="modalColors"></span></p><p><b>Fabric</b><span id="modalFabric"></span></p><p><b>Work</b><span id="modalWork"></span></p><p><b>Wash Care</b><span id="modalWash"></span></p><p><b>COD</b><span id="modalCod">Available after confirmation</span></p><p><b>Delivery</b><span id="modalDelivery">3–7 working days*</span></p><p><b>Availability</b><span id="modalStock"></span></p></div><details class="sizeChart"><summary>View Size Chart</summary><div><b>M</b><span>Bust 38</span><b>L</b><span>Bust 40</span><b>XL</b><span>Bust 42</span><b>XXL</b><span>Bust 44</span></div><small>Exact garment measurements WhatsApp par confirm karein.</small></details><div class="modalActions"><a id="modalHome" class="secondaryBtn" href="#top">⌂ Home</a><button id="wishlistModal" class="secondaryBtn">♡ Wishlist</button><button id="shareProduct" class="secondaryBtn">↗ Share</button><button id="modalCart" class="goldBtn">Add to Cart</button><a id="modalOrder" class="primaryBtn" target="_blank" rel="noopener">Order on WhatsApp</a></div><div class="relatedWrap"><small>YOU MAY ALSO LIKE</small><div id="relatedGrid" class="relatedGrid"></div></div></div></div></div>
-  <div id="zoomOverlay" class="zoomOverlay"><button id="closeZoom">×</button><img id="zoomImage" alt="Zoomed product"></div>
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalName" aria-hidden="true"><div class="modalCard"><button id="closeModal" class="closeBtn" aria-label="Close product">×</button><div class="gallery"><div class="mainImageBox"><button id="galleryPrev" class="galleryArrow galleryPrev" aria-label="Previous image">‹</button><img id="modalImage" alt="Product"><button id="galleryNext" class="galleryArrow galleryNext" aria-label="Next image">›</button><button id="zoomBtn" class="zoomBtn" aria-label="Open full screen image">⌕ Zoom</button><span id="imageCounter" class="imageCounter">1 / 1</span></div><div id="thumbs" class="thumbs" aria-label="Product images"></div></div><div class="productDetails"><small id="modalCategory"></small><h2 id="modalName"></h2><div class="modalPriceRow"><h3 id="modalPrice"></h3><del id="modalMrp"></del><span id="modalDiscount"></span></div><p id="modalDescription"></p><div class="detailGrid"><p><b>Design</b><span id="modalDesign"></span></p><p><b>Sizes</b><span id="modalSizes"></span></p><p><b>Colours</b><span id="modalColors"></span></p><p><b>Fabric</b><span id="modalFabric"></span></p><p><b>Work</b><span id="modalWork"></span></p><p><b>Wash Care</b><span id="modalWash"></span></p><p><b>COD</b><span id="modalCod">Available after confirmation</span></p><p><b>Delivery</b><span id="modalDelivery">3–7 working days*</span></p><p><b>Availability</b><span id="modalStock"></span></p></div><details class="sizeChart"><summary>View Size Chart</summary><div><b>M</b><span>Bust 38</span><b>L</b><span>Bust 40</span><b>XL</b><span>Bust 42</span><b>XXL</b><span>Bust 44</span></div><small>Exact garment measurements WhatsApp par confirm karein.</small></details><div class="modalActions"><a id="modalHome" class="secondaryBtn" href="#top">⌂ Home</a><button id="wishlistModal" class="secondaryBtn">♡ Wishlist</button><button id="shareProduct" class="secondaryBtn">↗ Share</button><button id="modalCart" class="goldBtn">Add to Cart</button><a id="modalOrder" class="primaryBtn" target="_blank" rel="noopener">Order on WhatsApp</a></div><div class="relatedWrap"><small>YOU MAY ALSO LIKE</small><div id="relatedGrid" class="relatedGrid"></div></div></div></div></div>
+  <div id="zoomOverlay" class="zoomOverlay" role="dialog" aria-modal="true" aria-label="Product image viewer"><button id="closeZoom" class="zoomClose" aria-label="Close zoom">×</button><button id="zoomPrev" class="zoomNav zoomPrev" aria-label="Previous image">‹</button><div class="zoomStage"><img id="zoomImage" alt="Zoomed product"><span id="zoomCounter" class="zoomCounter">1 / 1</span></div><button id="zoomNext" class="zoomNav zoomNext" aria-label="Next image">›</button></div>
   <aside id="cartDrawer" class="cartDrawer" aria-hidden="true"><div class="cartHead"><div><small>YOUR BAG</small><h2>Shopping Cart</h2></div><button id="closeCart" aria-label="Close cart">×</button></div><div id="cartItems" class="cartItems"></div><div class="cartFooter"><div class="couponBox"><input id="couponInput" placeholder="Coupon code"><button id="applyCoupon" class="secondaryBtn">Apply</button><small id="couponStatus"></small></div><div class="cartSummary"><div><span>Subtotal</span><b id="cartSubtotal">₹0</b></div><div id="cartDiscountRow" class="hidden discountLine"><span>Coupon Discount</span><b id="cartDiscount">-₹0</b></div><div class="cartTotal"><span>Total</span><b id="cartTotal">₹0</b></div></div><button id="checkoutWa" class="primaryBtn">Order Cart on WhatsApp</button><button id="clearCart" class="textBtn">Clear Cart</button><small>Final size, colour, COD and delivery details WhatsApp par confirm honge.</small></div></aside><div id="cartBackdrop" class="cartBackdrop"></div>
   <div id="festivalPopup" class="festivalPopup" aria-hidden="true"><button id="closeFestival">×</button><img src="brand-round.png" alt="Tanisha Ethnic"><small>LIMITED-TIME FESTIVE OFFER</small><h2 id="festivalTitle">Special Collection</h2><p id="festivalText">Discover premium festive styles.</p><a id="festivalShop" class="goldBtn" href="#shop">Shop Now</a></div><div id="toast" class="toast"></div>
 
   <section id="policy" class="policyBar"><b>Shopping information</b><span>COD and exchange availability is confirmed on WhatsApp before dispatch.</span><a href="mailto:tanishaethnic@gmail.com">Need help?</a></section>
- <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js?v=34-menu-layer-fix"></script><script src="menu.js?v=35-menu-layer-fix"></script><script src="app.js?v=35-menu-layer-fix"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js?v=38-final-launch"></script><script src="menu.js?v=38-final-launch"></script><script src="app.js?v=38-final-launch"></script>
 </body></html>

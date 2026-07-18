@@ -1,0 +1,9 @@
+TANISHA ETHNIC — V39 TRUE FINAL
+
+1. ZIP extract karein.
+2. Andar ki saari files GitHub repository root me upload/replace karein.
+3. Commit changes karein. Netlify auto-deploy hoga.
+4. Deploy ke baad browser site data/cache clear karein.
+5. Purana installed PWA uninstall karke Chrome se dobara Install app karein.
+6. setup.sql sirf tab run karein jab required tables/storage policies pehle run nahi ki gayi hon.
+7. Product edit me Current Images section se main image, order aur removal manage karein.

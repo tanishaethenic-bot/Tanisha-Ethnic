@@ -40,3 +40,6 @@ header>div:last-child{margin-left:auto!important}
 
 /* V33 floral logo */
 .loginCard img{width:116px!important;height:116px!important;object-fit:contain!important;border-radius:50%!important;background:#050505}
+
+/* V39 image manager */
+.adminImageManager{border:1px solid #e2d5ca;border-radius:16px;padding:14px;background:#fffaf6}.imageManagerHelp{margin:6px 0 12px;color:#78665c}.adminImageGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}.adminImageItem{border:2px solid #eadfd6;border-radius:14px;padding:8px;background:#fff}.adminImageItem.main{border-color:#b8873d;box-shadow:0 0 0 2px rgba(184,135,61,.15)}.adminImageItem img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:10px}.adminImageItem span{display:block;font-weight:700;margin:6px 0}.adminImageItem div{display:flex;gap:4px;flex-wrap:wrap}.adminImageItem button{padding:6px 8px;font-size:12px}

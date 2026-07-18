@@ -1,0 +1,12 @@
+TANISHA ETHNIC V39 TRUE FINAL LAUNCH
+
+- Multiple-image thumbnail gallery, arrows, counter and swipe retained.
+- Pinch/double-tap full-screen zoom added.
+- New, Sale, Out of Stock and Best Seller badges.
+- Out-of-stock cart guard.
+- Search suggestions generated from product data.
+- Estimated delivery date window.
+- Admin image manager: choose main, reorder and remove images.
+- Product share, recently viewed, related products, cart/wishlist persistence retained.
+- PWA cache bumped and frontend/admin assets cache-busted.
+- SEO/canonical/sitemap/robots retained for launch.
